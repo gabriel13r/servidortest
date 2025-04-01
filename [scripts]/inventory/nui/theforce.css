@@ -1,0 +1,538 @@
+@import url("http://fonts.cdnfonts.com/css/akrobat");
+:focus { 
+    outline: 0;
+    border: 0;
+    font-family: "Akrobat", sans-serif;
+}
+
+input{
+    border: none;
+    text-decoration: none;
+    font-family: "Akrobat", sans-serif;
+    text-align: center;
+    font-size: 11px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    opacity: 90%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+}
+
+::selection { background: transparent; }
+::-moz-selection { background: transparent; }
+
+#actionmenu {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+    left: 0;
+    font-family: "Akrobat", sans-serif;
+    color: white;
+	display: none;
+    overflow: auto;
+	background:radial-gradient(57.76% 52.99% at 50% 47.36%,rgba(29,26,30,0) 0%,rgba(19,20,44,.5) 100%),radial-gradient(57.76% 52.99% at 50% 47.36%,rgba(29,26,30,0) 0%,rgba(19,20,44,.73) 100%);
+}
+
+#inventory {
+	position: absolute;
+	width: 625px;
+	height: 510px;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: rgba( 255, 0, 0, 0.5);  */
+}
+
+#inventory-title {
+    position: absolute;
+    width: 715px;
+    height: 24px;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-top: 6px;
+    border-radius: 3px;
+    background-color: rgba( 0, 0, 0, 0.9);
+}
+
+
+/*=[ ITEMS ]=======================================*/
+
+/* DISTANCIA DOS SLOTS, QUANTOS POR FILEIRA */
+
+#inventory-items {
+    position: absolute;
+	width: 725px;
+    height: 495px;
+    margin-top: 40px;
+    float: left;
+    overflow: auto;
+    border-radius: 3px;
+    /* background-color: rgba(255, 0, 234, 0.5); */
+}
+
+#inventory-slots {
+    position: absolute;
+	width: 725px;
+    height: 350px;
+    margin-top: 40px;
+    float: left;
+    overflow: hidden;
+}
+
+/*=[ ITEM ]========================================*/
+
+.item {
+    font-family: "Akrobat", sans-serif;
+	position: relative;
+	width: 90px;
+	height: 90px;
+	float: left;
+    background:rgba(255,255,255,.1);
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    -webkit-transition: background-color 0.3s linear;
+    -ms-transition: background-color 0.3s linear;
+    transition: background-color 0.3s linear;
+}
+
+.slot {
+	position: relative;
+	width: 90px;
+	height: 90px;
+	float: left;
+    border: 1px solid rgba(255, 255, 255, 0.596);
+    padding: 7px; 
+    margin: 7px; 
+    border-radius: 5px;
+    margin-right: 4px;
+    margin-bottom: 10px;
+}
+
+.slot:hover {
+    border: 1px solid #f9af37;
+}
+
+.item s {
+	font-size: 9px;
+	text-decoration: none;
+	position: absolute;
+	margin: -45px 0 0 15px;
+	color: rgba(255,255,255,0.5);
+}
+
+.hoverControl {
+	color: #fff;
+	background-color: rgba(0,0,0,0.5);
+}
+
+#item-name {
+	position: absolute;
+	width: 110px;
+    height: 19px;
+    padding-top: 6px;
+	bottom: 0px;
+	color: #ffffff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    text-align: center;
+    font-size: 14;
+    font-weight: 500;
+    left: -11px;
+    text-transform: uppercase;
+}
+
+#item-amount {
+    position: absolute;
+    top: 3px;
+    right: 5px; /* Ajuste conforme necessário */
+    background-color: #f9b037;
+    border-radius: 2px;
+    color: rgba(255, 255, 255, 0.932);
+    text-align: center;
+    font-size: 11px;
+    white-space: nowrap;
+    padding: 2px 5px; /* Adicione padding para espaçamento interno */
+}
+
+#item-weight {
+    position: absolute;
+    width: 35px;
+    top: 2px;
+    left: 5px;
+	color: rgba(255, 255, 255, 0.877);
+	text-align: left;
+	font-size: 11px;
+	float: left;
+}
+
+#item-icon {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    top: 10px;
+    left: 18px;
+}
+
+#item-icon img {
+    width: 80%;
+    height: 80%;
+    top: 45%;
+    left: 37%;
+    transform: translate(-50%,-50%);
+}
+
+/*=[ BOTÕES ]======================================*/
+
+#inventory-buttons {
+    position: absolute;
+    width: 700px;
+    height: 92px;
+    bottom: 0px;
+    top: 500px;
+    left: 5px;
+    border-bottom: 2px solid #f9b037;
+}
+
+#inventory-amount {
+    position: absolute;
+    width: 634px;
+    height: 10px;
+    right: 0px;
+    bottom: 0px;
+    /* border-bottom: 2px solid rgba(66, 236, 134, 1.0); */
+}
+
+.use-show {
+    position: absolute;
+    width: 110px;
+    height: 21px;
+    padding-top: 9px;
+    bottom: 4px;
+    border-radius: 3px;
+    top: 55px;
+    background: rgba(255,255,255,.1);
+    font-size: 13;
+    font-weight: 400;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+.use {
+    opacity: 0;
+    position: absolute;
+    width: 110px;
+    height: 56px;
+    padding-top: 9px;
+    bottom: -25px;
+    border-radius: 3px;
+    background-color: rgba( 0, 0, 0, 0.9);
+    font-size: 11;
+    font-weight: 400;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+.use-show:hover {
+    border: solid 1px #f9b037de;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0,0,0,0.06);
+}
+
+.drop-show {
+    position: absolute;
+    width: 109px;
+    height: 21px;
+    left: 118px;
+    padding-top: 9px;
+    bottom: 4px;
+    border-radius: 3px;
+    top: 55px;
+    background: rgba(255,255,255,.1);
+    font-size: 13;
+    font-weight: 400;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+.drop-show:hover {
+    border: solid 1px #f9b037de;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0,0,0,0.06);
+}
+
+.drop {
+    opacity: 0;
+    position: absolute;
+    width: 110px;
+    height: 56px;
+    left: 120px;
+    padding-top: 9px;
+    bottom: -25px;
+    border-radius: 3px;
+    background: rgba(255,255,255,.1);
+    font-size: 11;
+    font-weight: 400;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+.drop:hover {
+    color: rgba(0,0,0,0.8);
+    background-color: rgba(66, 236, 134, 1.0);
+}
+
+.send-show {
+    position: absolute;
+    width: 109px;
+    height: 21px;
+    left: 235px;
+    padding-top: 9px;
+    bottom: 4px;
+    border-radius: 3px;
+    top: 55px;
+    background: rgba(255,255,255,.1);
+    font-size: 13;
+    font-weight: 400;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+.send {
+    opacity: 0;
+    position: absolute;
+    width: 110px;
+    height: 56px;
+    left: 240px;
+    padding-top: 9px;
+    bottom: -25px;
+    border-radius: 3px;
+    top: 100px;
+    background-color: rgba( 0, 0, 0, 0.9);
+    font-size: 11;
+    font-weight: 400;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+.send-show:hover {
+    border: solid 1px #f9b037de;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0,0,0,0.06);
+}
+
+#amount {
+    position: absolute;
+    width: 109px;
+    height: 30px;
+    left: 353px;
+    padding-top: 2px;
+    bottom: 4px;
+    border-radius: 3px;
+    top: 55px;
+    background: rgba(255,255,255,.1);
+    font-size: 13;
+    font-weight: 400;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border: none;
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+#amount:hover {
+    border: solid 1px #f9b037de;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0,0,0,0.06);
+}
+
+input {
+    border: none;
+    text-decoration: none;
+}
+
+::placeholder {
+    border: none;
+    text-decoration: none;
+}
+
+.qtd {
+    color: #fff;
+    border: none;
+    text-decoration: none;
+}
+
+.amount-text {
+    position: absolute;
+    width: 840px;
+    height: 23px;
+    padding-top: 9px;
+    top: -25vw;
+    left: 223px;
+    bottom: 4px;
+    font-size: 17;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    text-align: center;
+    color: rgba(184, 184, 184, 0.781);
+}
+
+.amount-text b {
+    font-size: 20;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.amount-text g {
+    margin-right: 2px;
+    color: rgba(184, 184, 184, 0.781);
+}
+
+.icon {
+    margin-right: 7px;
+    font-size: 20px;
+    color: #f9b037;
+}
+
+
+.close {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    border-radius: 3px;
+    top: 22px;
+    left: 250px;
+    background-color: rgba(255, 255, 255, 0.082);
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+.close img {
+    width: 50%;
+    height: 50%;
+}
+
+.close:hover {
+    background-color: #f9b03777;
+}
+
+.unequip {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    border-radius: 3px;
+    top: 22px;
+    left: 220px;
+    background: #f9b037;
+
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+.unequip:hover {
+    background: #f9b0378c;
+}
+
+.unequip img {
+    width: 60%;
+    height: 60%;
+}
+
+/*=[ SCROLL ]======================================*/
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 1px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f9b037;
+    border-radius: 10px;
+}
+
+/*=[ INICIO INVENTARIO ]======================================*/
+
+header {
+	display: flex;
+	color: #fff;
+	align-items: center;
+	margin-bottom: -25px;
+	font-family: 'Arial';
+	text-transform: uppercase;
+}
+  
+header .text {
+    margin-left: 9px;
+	display: flex;
+	font-size: 12px;
+	letter-spacing: 3px;
+	flex-direction: column;
+}
+
+header .text small {
+    padding: 5px 5px 2px 5px;
+    background: #f9b037;
+    width: 88px;
+	height: 13px;
+    border-radius: 2px;
+}
+  
+header .text span {
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 0px;
+}

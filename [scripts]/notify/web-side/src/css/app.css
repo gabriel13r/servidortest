@@ -1,0 +1,163 @@
+@import url("http://fonts.cdnfonts.com/css/akrobat");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: none;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Akrobat", sans-serif;
+}
+
+notify {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+}
+
+.notify {
+  position: relative;
+  display: flex;
+  font-size: 25px;
+  margin-top: 5px;
+  border-radius: 3px;
+  padding: 15px 15px;
+  align-items: center;
+  transition: all .2s;
+  animation: fadeIn .5s ease-in;
+  background: rgba(0, 0, 0, 0.363);
+  /* border: 2px solid rgba(255, 255, 255, 0.11); */
+}
+
+.notify img {
+  max-width: 35px;
+  margin-right: 10px;
+}
+.notify .text {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.notify .text span {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  letter-spacing: 1px;
+}
+
+.notify .text p {
+  /* opacity: .5; */
+  font-size: 15px;
+  max-width: 280px;
+  letter-spacing: .5px;
+}
+
+.notify .bar {
+  position: absolute;
+  right: 15px;
+  bottom: 7px;
+  width: 40px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.11);
+}
+
+
+.notify .bar .fill {
+  width: 100%;
+  height: 100%;
+  background-color: #6fa9dc;
+}
+
+#sucesso  > .bar .fill {
+  background-color: #a3c846 !important;
+}
+
+#negado  > .bar .fill {
+  background-color: #e61a42 !important;
+}
+
+#aviso  > .bar .fill {
+  background-color: #ffb400 !important;
+}
+#importante  > .bar .fill {
+  background-color: #6fa9dc !important;
+}
+
+#Prefeitura > .bar .fill {
+  background: linear-gradient(to right, rgb(88, 69, 255), rgb(255, 74, 212), rgb(252, 156, 45));
+}
+
+#Policia > .bar .fill {
+  background-color: #1818cf !important;
+}
+
+#Hospital > .bar .fill {
+  background-color: #FF0000 !important;
+}
+
+#Salario > .bar .fill {
+  background-color: #81CDA1 !important;
+}
+
+#penitenciaria > .bar .fill {
+  background-color: #524e4f !important;
+}
+/*
+==============================================
+  Containers
+==============================================
+*/
+
+@keyframes fadeIn {
+  0% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.normal {
+  left: 5px;
+  top: 50%;
+  align-items: flex-start;
+  transform: translate(0,-50%);
+}
+
+.bottom {
+  left: 50%;
+  bottom: 70px;
+  align-items: center;
+  transform: translate(-50%,0);
+}
+
+.left {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  align-items: flex-end;
+}
+
+.center {
+  left: 50%;
+  top: 70px;
+  align-items: center;
+  transform: translate(-50%,0);
+}
+
+#default img {
+  display: none !important;
+}

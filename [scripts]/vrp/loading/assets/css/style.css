@@ -1,0 +1,240 @@
+/**
+* SlentKat - Discord: SlentKat#5406
+**/
+
+@font-face {
+    font-family: BebasNeue;
+    src: url(../fonts/BebasNeue.ttf);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url("https://cdn.discordapp.com/attachments/809105908721647618/835573152489930772/loading-screen.png") no-repeat center fixed;
+	background-size:cover;
+    font-family: BebasNeue;
+    background: #161922;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.block-copy {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0px;
+  background: transparent;
+  z-index: 1000;
+}
+
+#preloader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo {
+    width: 180px;
+    height: 164.83px;
+    /*background-image: url(../img/allstar-loadingscreen.png);*/
+    background-size: cover;
+    position: absolute;
+    top: 40%;
+    left: 46%;
+    transform: translate(-40%, -40%) scale(1.3);
+    -webkit-animation: pulseBounce 2.5s infinite;
+    animation: pulseBounce 2.5s infinite;
+    text-align: center;
+}
+
+.loading-text {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    text-align: center;
+
+    font-size: 50px;
+   
+}
+
+.tip-text {
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    height: auto;
+    position: absolute;
+    bottom: 165px;
+    left: 0px;
+    text-align: center;
+    font-size: 13px;
+}
+
+@keyframes pulseBounce {
+    0% {
+        margin-top: 0;
+        transform: translate(-55%, -50%) scale(1);
+    }
+    25% {
+        transform: translate(-55%, -50%) scale(1.05);
+    }
+    50% {
+        transform: translate(-55%, -50%) scale(1);
+    }
+    75% {
+        transform: translate(-55%, -50%) scale(1.05);
+    }
+    100% {
+        transform: translate(-55%, -50%) scale(1);
+    }
+}
+
+
+/* https://loading.io/css/ */
+
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    width: 13px;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+    left: 6px;
+    animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+    left: 26px;
+    animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+    left: 45px;
+    animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+    0% {
+        top: 6px;
+        height: 51px;
+    }
+    50%,
+    100% {
+        top: 19px;
+        height: 26px;
+    }
+}
+
+.loader {
+    width: 500px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Oswald', sans-serif;
+    text-shadow: -1px 2px 8px rgba(28,110,164,0.58);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #ffFFFF;
+    letter-spacing: 0.2em;
+  }
+  .loader1 {
+    width: 500px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 95%;
+  
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    font-family: 'Oswald', sans-serif;
+    text-shadow: -1px 2px 8px rgba(28,110,164,0.58);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #ffFFFF;
+    letter-spacing: 0.2em;
+  }
+  .loader::before, .loader::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    position: absolute;
+    animation: load .9s infinite alternate ease-in-out;
+  }
+  .loader::before {
+    top: 0;
+  }
+  .loader::after {
+    bottom: 0;
+  }
+  
+  @keyframes load {
+    0% {
+      left: 0;
+      height: 30px;
+      width: 15px;
+    }
+    50% {
+      height: 8px;
+      width: 40px;
+    }
+    100% {
+      left: 500px;
+      height: 30px;
+      width: 15px;
+    }
+  }
+  
+  
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

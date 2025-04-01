@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanted Shop - HUD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="dist/loading-bar.min.css">
+    <link rel="stylesheet" type="text/css" href="tooltip.css">
+    <link rel="stylesheet" type="text/css" href="my-loading-bar.css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="logo">
+		<img src="./logo.png" alt="Osti Ville" />
+	</div>
+
+    <div class="velocimeterHud" style="display: none;">
+        <svg class="circle" width="50" height="50">
+            <circle class="outer" stroke="#000" stroke-width="1.4" style="stroke-opacity: 0.4;" fill="transparent"
+                r="18" cx="26" cy="26" stroke-dasharray="55 90" stroke-dashoffset="0" />
+            <circle class="progress progress-speed" stroke="url(#gradient)" stroke-width="1.7"
+                style="stroke-opacity: 1;" fill="transparent" r="18" cx="26" cy="26" stroke-dasharray="45.7 90"
+                stroke-dashoffset="0" />
+            <defs>
+                <linearGradient id="gradient">
+                    <stop offset="30%" stop-color="#fff" />
+                    <stop offset="100%" stop-color="#fff" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <svg class="circle2" width="50" height="50">
+            <circle class="outer" stroke="#000" stroke-width="1.4" style="stroke-opacity: 0.4;" fill="transparent"
+                r="18" cx="26" cy="26" stroke-dasharray="23 90" stroke-dashoffset="0" />
+            <circle class="progress progress-fuel" stroke="url(#gradient2)" stroke-width="1.7"
+                style="stroke-opacity: 1;" fill="transparent" r="18" cx="26" cy="26" stroke-dasharray="15.7 90"
+                stroke-dashoffset="0" />
+            <defs>
+                <linearGradient id="gradient2">
+                    <stop offset="30%" stop-color="#ffec00" />
+                    <stop offset="100%" stop-color="#ffec00" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <div class="engineCircle">
+            <svg class="svgCircle">
+                <circle circle class="circleBack" r="18" cx="50%" cy="50%"></circle>
+                <circle class="engineFill circleFill6" r="18" cx="50%" cy="50%"></circle>
+            </svg>
+            <i class="fa-solid fa-engine"></i>
+            <span>79%</span>
+        </div>
+
+        <div class="carMarch"></div>
+        <h1 class="velo">0<b>96</b></h1>
+        <span>KM/H</span>
+        <div class="carInfo">
+            <img src="svg/cintoaberto.svg" class="seatbelt">
+            <img src="svg/arrow.svg" class="lightCar" id="lightLeft" style="transform: scaleX(-1); opacity: 0;">
+            <img src="svg/arrow.svg" class="lightCar" id="lightRight">
+        </div>
+
+        <div id="farol"><img src="svg/farolbaixo.svg" alt="">
+        </div>
+        <div id="iconfuel"><img
+                src="https://cdn.discordapp.com/attachments/1024708109911986297/1136090448344121394/fuel-station-pump_icon-icons.com_70481.png" alt="">
+            <span>50%</span>
+        </div>
+        <div id="lock"><img src="svg/tranca.svg" alt="">
+        </div>
+    </div>
+    <div id="barcortagiro" data-img="svg/cortagiro.svg"> </div>
+
+    <div class="serverInfos">
+        <!-- <div class="item">
+            <div class="icon">
+                <i class="fa-regular fa-compass"></i>
+            </div>
+            <span class="location">...</span>
+        </div> -->
+        <div class="item" id="hourp">
+            <div class="icon">
+                <i class="fa-regular fa-clock"></i>
+            </div>
+            <span class="hour">00:00</span>
+            <style>
+                .icon i {
+                    font-size: 18px;
+                }
+            </style>
+        </div>
+        <div class="item" id="microp">
+            <div class="icon">
+                <i class="fa-solid fa-microphone-lines"></i>
+            </div>
+            <span class="voice">Normal</span>
+        </div>
+        <div class="item">
+            <div class="icon">
+                <i class="fa-solid fa-walkie-talkie"></i>
+            </div>
+            <span class="radio">DESLIGADO</span>
+        </div>
+    </div>
+
+    <div class="playerHud">
+        <div class="circle" id="vidaicon">
+            <svg class="svgCircle">
+                <circle class="circleBack" r="18" cx="50%" cy="50%"></circle>
+                <circle class="lifeFill circleFill2" r="18" cx="50%" cy="50%"></circle>
+            </svg>
+            <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <div class="circle" id="coleteicon">
+            <svg class="svgCircle">
+                <circle class="circleBack" r="18" cx="50%" cy="50%"></circle>
+                <circle class="shieldFill circleFill2" r="18" cx="50%" cy="50%"></circle>
+            </svg>
+            <i class="fa-solid fa-shield-blank"></i>
+        </div>
+
+        <div class="circle" id="fomeicon">
+            <svg class="svgCircle">
+                <circle class="circleBack" r="18" cx="50%" cy="50%"></circle>
+                <circle class="foodFill circleFill2" r="18" cx="50%" cy="50%"></circle>
+            </svg>
+            <i class="fa-solid fa-utensils"></i>
+        </div>
+
+        <div class="circle" id="sedeicon">
+            <svg class="svgCircle">
+                <circle circle class="circleBack" r="18" cx="50%" cy="50%"></circle>
+                <circle class="waterFill circleFill2" r="18" cx="50%" cy="50%"></circle>
+            </svg>
+            <i class="fa-solid fa-water"></i>
+        </div>
+
+        <div class="circle" id="stressicon">
+            <svg class="svgCircle">
+                <circle circle class="circleBack" r="18" cx="50%" cy="50%"></circle>
+                <circle class="stressFill circleFill2" r="18" cx="50%" cy="50%"></circle>
+            </svg>
+            <i class="fa-solid fa-brain"></i>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="dist/loading-bar.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

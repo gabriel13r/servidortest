@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rajdhani", sans-serif;
+}
+
+body {
+  height: 100vw;
+  margin: auto;
+  user-select: none;
+  overflow: hidden;
+  background-color: transparent;
+
+  --clrGeral: #ff0051;
+}
+
+.container {
+  height: 100vh;
+  padding: 0;
+  width: 100vw;
+}
+
+#fainting {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background: radial-gradient(42.34% 84.85% at 0, #ff0051 0, #00000091 100%),
+  radial-gradient(116.12% 90.14% at 107.45% 40.37%, var(--clrGeral) 0, 
+  rgba(0, 0, 0, 0.552) 34.13%, rgba(0, 0, 0, 0.468) 100%), rgba(35, 35, 35, 0.52) center no-repeat;
+}
+
+.img {
+  width: 10rem;
+  -webkit-user-drag: none;
+}
+
+#fainting .container_ {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fainting_title {
+  font-size: 4.68vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.fainting_title .esta{
+  -webkit-text-stroke: 0.1rem var(--clrGeral);
+  background: linear-gradient(to top, transparent 5%, var(--clrGeral) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.clock {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 200;
+  position: absolute;
+  left: 50%;
+  top: 96%;
+  color: var(--clrGeral);
+  margin-top: 1.5625vw;
+  transform: translate(-50%, 0);
+  width: 6.677083333333334vw;
+  padding: 0.20833333333333334vw;
+}
+
+.container_ b{
+  font-size: 1.1vw;
+  letter-spacing: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+#fainting .container_ .botao {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 7.8125vw;
+  width: 13.75vw !important ;
+  height: 3.229166666666667vw;
+  text-align: center;
+  padding: 0.15625vw;
+  border-radius: 0.2604166666666667vw;
+  background: radial-gradient(150.21% 1210.32% at 50% 50%, var(--clrGeral) 0, rgba(49, 175, 212, 0) 100%);
+  box-shadow: 0 5px 35rem var(--clrGeral);
+  letter-spacing: 0.2rem;
+  font-size: 0.7895833333333334vw;
+  color: #fff;
+  text-shadow: 0 0.050rem 0.300rem #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: grab;
+  transition: ease-in-out 1s;
+  border: none
+}
+
+#fainting .container_ .botao:hover{
+  opacity: .8;
+}
+
+.popup .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #1a1a1a;
+  width: 400px;
+  height: 134PX;
+  border-radius: 0.2604166666666667vw;
+  z-index: 2;
+  text-align: center;
+  padding: 1.0416666666666667vw;
+  box-sizing: border-box;
+}
+
+.popup .btn {
+  position: relative;
+  top: 10%;
+  left: 0;
+  margin: 1rem;
+  outline: none;
+  color: #000;
+}
+
+.popup .title {
+  position: relative;
+  font-size: 0.8333333333333334vw;
+  top: -5%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.popup.active .overlay {
+  display: block;
+}
+
+.popup.active .content {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.subtitle {
+  padding-left: 1.04vw;
+}

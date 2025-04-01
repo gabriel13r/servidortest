@@ -1,0 +1,1364 @@
+/* TESTE */
+
+/* background:linear-gradient(65deg,#1259AC -6.69%,rgba(18,89,172,.5) 53.29%),rgba(17,17,17,.85); */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* cursor: default; */
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: #2e2f31; */
+    /* background: url(https://cdn.discordapp.com/attachments/708215158606135306/762737575945175040/bakcg.png); */
+    background-size: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#logo img {
+    zoom: 1;
+	top: 0.7%;
+	right: 46%;
+	height: 155px;
+	position: absolute !important;
+}  
+
+@keyframes guitrotation {
+
+    10%,
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+#left {
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    left: 20px;
+    bottom: 50px;
+    transform: scale(1);
+}
+
+#barlife {
+    position: absolute;
+    left: 90px;
+    bottom: 0px;
+    transform: scale(1);
+}
+
+#barshield {
+    position: absolute;
+    left: 120px;
+    bottom: 0px;
+    transform: scale(1);
+}
+
+#barfood {
+    position: absolute;
+    left: 60px;
+    bottom: 0px;
+    transform: scale(1);
+}
+
+#barwater {
+    position: absolute;
+    left: 30px;
+    bottom: 0px;
+    transform: scale(1);
+}
+
+#barstress {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transform: scale(1);
+}
+
+#left span {
+    position: absolute;
+    bottom: -40px;
+    left: 40px;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+#left i {
+    position: absolute;
+    bottom: 10px;
+    left: 150px;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+
+#bol {
+    position: absolute;
+    bottom: 27px;
+    left: 162px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 238, 0, 0.849);
+}
+
+#bol span {
+    position: absolute;
+    top: 7%;
+    left: 30%;
+    color: white;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#iconlife img {
+    position: absolute;
+    width: 14px;
+    left: 96px;
+    bottom: 10px;
+}
+
+#iconshield img {
+    position: absolute;
+    width: 14px;
+    left: 126px;
+    bottom: 10px;
+}
+
+#iconfood img {
+    position: absolute;
+    width: 14px;
+    left: 66.3px;
+    bottom: 10px;
+}
+
+#iconwater img {
+    position: absolute;
+    width: 10px;
+    left: 37.8px;
+    bottom: 10px;
+}
+
+#iconstress img {
+    position: absolute;
+    width: 6px;
+    left: 9.8px;
+    bottom: 10px;
+}
+
+
+#container {
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    right: 520px;
+    bottom: 95px;
+    transform: scale(0.55);
+}
+
+#fundo {
+    filter: drop-shadow(0px 0px 5px #f1f1f1);
+    left: 650px;
+    bottom: 0px;
+    transform: scale(0.31);
+    z-index: 1;
+}
+
+#discord {
+    width: 50px;
+    position: absolute;
+    display: flex;
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    justify-content: center;
+    top: 205px;
+    left: 1140px;
+}
+
+#discord span {
+    width: 0px;
+    font-size: 32px;
+    color: #fff;
+    text-shadow: rgb(0, 0, 0) 0 2px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 95px;
+    left: 90px;
+}
+
+
+#textfuel {
+    width: 30px;
+    position: absolute;
+    display: flex;
+    font-size: 22px;
+    color: rgb(6, 255, 180);
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    align-items: center;
+    justify-content: center;
+    top: 285px;
+    left: 1075px;
+    letter-spacing: 6px;
+}
+
+#textfuel span {
+    width: 0px;
+    font-size: 30px;
+    color: rgb(6, 255, 180);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 60px;
+    left: 88px;
+}
+
+
+#vida {
+    width: 30px;
+    position: absolute;
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    align-items: center;
+    justify-content: center;
+    top: 205px;
+    left: 1015px;
+}
+
+#vida span {
+    width: 0px;
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 60px;
+    left: 88px;
+}
+
+#colete {
+    width: 30px;
+    position: absolute;
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    align-items: center;
+    justify-content: center;
+    top: 205px;
+    left: 1095px;
+}
+
+#colete span {
+    width: 0px;
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 60px;
+    left: 88px;
+}
+
+#sede {
+    width: 30px;
+    position: absolute;
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    align-items: center;
+    justify-content: center;
+    top: 205px;
+    left: 1170px;
+}
+
+#sede span {
+    width: 0px;
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 60px;
+    left: 88px;
+}
+
+#fome {
+    width: 30px;
+    position: absolute;
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    align-items: center;
+    justify-content: center;
+    top: 205px;
+    left: 1240px;
+}
+
+#fome span {
+    width: 0px;
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 60px;
+    left: 88px;
+}
+
+
+#stress {
+    width: 30px;
+    position: absolute;
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    align-items: center;
+    justify-content: center;
+    top: 205px;
+    left: 1240px;
+}
+
+#stress span {
+    width: 0px;
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 60px;
+    left: 88px;
+}
+
+#gasmotorizado {
+    left: 962px;
+    transform: scale(0.75);
+    bottom: -50px;
+}
+
+
+#shieldbar {
+    left: 890px;
+    bottom: 135px;
+    transform: scale(2.199);
+
+}
+
+#fomebar {
+    left: 710px;
+    bottom: 722px;
+    transform: scale(1.0);
+}
+
+#sedebar {
+    left: 1040px;
+    bottom: 1004px;
+    transform: scale(1.0);
+}
+
+
+#contagiro {
+    left: 692px;
+    transform: scale(0.45);
+    bottom: 720px;
+}
+
+#testecar {
+    transform: scale(0.8);
+    position: absolute;
+    left: 190px;
+    top: 630px;
+}
+
+#gasbar {
+    left: 678px;
+    transform: scale(0.30);
+    bottom: 893px;
+}
+
+
+#estaminabar {
+    left: 1358px;
+    transform: scale(0.24);
+    bottom: 490px;
+}
+
+
+#status {
+    width: 250px;
+    height: 50px;
+    position: fixed;
+    left: 725px;
+    bottom: -135px;
+}
+
+#status2 {
+    width: 250px;
+    height: 50px;
+    position: fixed;
+    left: 970px;
+    bottom: -150px;
+}
+
+.barras {
+    width: 200px;
+    float: right;
+    height: 5px;
+    background: #c4c4c480;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+
+}
+
+.barras span {
+    display: block;
+    height: 7px;
+    background: yellow;
+    position: relative;
+    bottom: 2.5px;
+    float: right;
+    transition: all 0.3s ease-in-out;
+    animation: animate 1s linear 1;
+}
+
+#stamina {
+    width: 130px;
+    height: 7px;
+    background: #c4c4c480;
+    float: right;
+
+    margin-top: 11px;
+}
+
+#stamina span {
+    display: block;
+    height: 7.5px;
+    background: rgb(226, 214, 45);
+    float: right;
+    transition: all 0.3s ease-in-out;
+    animation: animate 1s linear 1;
+}
+
+#velocimetro {
+    width: 150px;
+    height: 480px;
+    float: right;
+    text-align: right;
+    position: relative;
+    top: -10px;
+    /* transform: rotateX(-5deg) rotateY(-15deg); */
+    right: 5px;
+    z-index: 1;
+}
+
+
+#velocimetro b {
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px;
+    float: right;
+    position: relative;
+    bottom: 11px;
+    right: 4px;
+    letter-spacing: -4px !important;
+
+}
+
+#marcha {
+    position: relative;
+    bottom: 50px;
+}
+
+#velocidade {
+    position: absolute;
+    top: 190px;
+    left: 780px;
+    width: 360px;
+}
+
+.quadrados {
+    width: 55px;
+    height: 100px;
+    float: right;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 1500;
+    margin: 2px;
+    font-size: 100px;
+    font-family: 'Rubik', sans-serif;
+    /* font-style: italic 2px; */
+    color: #ffffff80;
+
+}
+
+
+#velocidade2 {
+    position: relative;
+    left: 1045px;
+    top: 200px;
+}
+
+.quadrados2 {
+    width: 25px;
+    height: 35px;
+    float: right;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 150px;
+    margin: 2px;
+    left: 50px;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff88;
+
+}
+
+.marchas {
+    width: 10px;
+    height: 10px;
+    float: right;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bolder;
+    margin: 2px;
+    color: #ffffff80;
+    position: relative;
+    bottom: 8px;
+}
+
+.atual {
+    color: #fff;
+}
+
+.ativo {
+    color: #fff;
+}
+
+#coleteImg {
+    width: 14px;
+    position: absolute;
+    right: -20px;
+    top: 33px;
+}
+
+
+#farol {
+    position: absolute;
+}
+
+#farol img {
+    width: 11px;
+    position: relative;
+    right: -9px;
+    bottom: -50px;
+}
+
+#lock{
+    position: absolute;
+}
+#lock img{
+    width: 14px;
+    position: relative;
+    right: -31px;
+    bottom: -49px;
+}
+
+
+#motor {
+    position: absolute;
+}
+
+#motor img {
+    width: 15px;
+    position: relative;
+    right: 0px;
+    bottom: -50px;
+}
+
+#iconfuel {
+    position: absolute;
+}
+
+#iconfuel img {
+    width: 9px;
+    position: relative;
+    right: -75px;
+    bottom: -22px;
+}
+
+#iconfuel span {
+    position: absolute;
+    right: -165px;
+    bottom: -18px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    text-align: center;
+    justify-items: center;
+}
+
+@keyframes animate {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+
+.geardisplay {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    width: 45px;
+    height: 40px;
+    /* border-radius: 50%;
+    border: 5px solid #fff; */
+    position: fixed;
+    bottom: -120px;
+    left: 1092px;
+    color: rgb(63, 255, 171);
+    border-color: rgb(63, 255, 171);
+}
+
+.geardisplay2 {
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    position: fixed;
+    bottom: -136px;
+    left: 1087px;
+    border-color: rgb(63, 255, 171);
+}
+
+
+
+
+.geardisplay span {
+    margin-left: 0px;
+}
+
+/* ADIONADO DEPOIS DE PRONTO */
+
+/* #divGasosa{
+    width: 18px;
+    position: relative;
+    float: right;    
+    color: #fff;
+    top: 520px;
+    left: 900px;
+} */
+
+#gasolinaimg img {
+    width: 18px;
+    position: absolute;
+    color: #fff;
+    float: right;
+    top: 545px;
+    left: 700px;
+}
+
+#divGasosa {
+    width: 30px;
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+    top: 610px;
+    left: 848px;
+}
+
+#gasolina span {
+    width: 0px;
+    font-size: 12px;
+    color: #fff;
+    position: relative;
+    float: right;
+    top: 55px;
+    left: 112px;
+}
+
+#cinto {
+    position: absolute;
+}
+
+#cinto img {
+    width: 30px;
+    position: relative;
+    left: 1182px;
+    top: 190px;
+    animation: animateCinto 2s linear infinite;
+}
+
+#motorimg img {
+    width: 18px;
+    position: absolute;
+    left: 785px;
+    top: 545px;
+}
+
+
+
+@keyframes animateCinto {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0.11;
+    }
+
+    100% {
+        opacity: 0.9;
+    }
+}
+
+.serverInfos {
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    display: flex;
+    zoom: 1.2;
+    align-items: center;
+}
+
+.serverInfos .item {
+    color: #fff;
+    font-size: 11px;
+    display: flex;
+    font-weight: 300;
+    margin-left: 0px;
+    align-items: center;
+    text-transform: uppercase;
+    padding-right: 12px;
+    border-radius: 3px;
+    background-color: #ffffff13;
+}
+
+
+.serverInfos .icon {
+    position: relative;
+    width: 11px;
+    height: 26px;
+    display: flex;
+    /* margin-right: 3px; */
+    align-items: center;
+    border-radius: 4px;
+    justify-content: center;
+}
+
+.serverInfos .item .icon i {
+    position: relative;
+    left: -18px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hourp {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+}
+
+#microp {
+    position: absolute;
+    top: 30px;
+    right: 80px;
+}
+
+.location b {
+    color: #848ceb;
+    font-weight: 600;
+}
+
+.microphone {
+    position: absolute;
+    top: 4%;
+    right: 50px;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    border-radius: 5px;
+    padding-bottom: 7px;
+    align-items: center;
+    flex-direction: column;
+    filter: drop-shadow(0px 0px 5px #e253ff);
+    justify-content: center;
+    background-color: rgba(73, 73, 73, 0.253);
+    transform: rotateZ(90deg);
+}
+
+.microphone i {
+    margin-bottom: 3px;
+    transform: rotateZ(-90deg);
+    font-size: 22px;
+}
+
+.micStatus {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 5px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.microphone .active {
+    background-color: rgb(255, 0, 0);
+}
+
+/*
+=========================================
+  Player Hud
+=========================================
+*/
+
+.playerHud {
+    position: absolute;
+    bottom: -30px;
+    right: 56.5%;
+    display: flex;
+    /* background-color: red;
+    width: 100px;
+    height: 100px; */
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(0, -50%);
+    zoom: 1.20;
+}
+
+
+.playerHud .circle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    border-radius: 100%;
+    margin-bottom: 5px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    align-items: center;
+    justify-content: center;
+    /* filter: drop-shadow(0px 0px 1px #ecba16); */
+
+}
+
+.playerHud .circle i {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.playerHud .circle:last-child {
+    margin-bottom: 0;
+}
+
+/*
+=========================================
+  Velocimeter
+=========================================
+*/
+
+#barcortagiro {
+    position: absolute;
+    bottom: 215px;
+    right: 20px;
+    transform: scale(0.22);
+    opacity: 0;
+}
+
+.velocimeterHud {
+    position: absolute;
+    right: 130px;
+    bottom: 105px;
+    display: flex;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    flex-direction: column;
+    zoom: 1.2;
+}
+
+.velocimeterHud .carMarch {
+    position: relative;
+    top: -44px;
+    right: -13px;
+    display: flex;
+    background-color: #952335;
+    border-radius: 2px;
+    color: rgba(255, 255, 255, 0.932);
+    text-align: center;
+    font-size: 14px;
+    white-space: nowrap;
+    padding: 2px 5px;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+}
+
+.velocimeterHud .carMarch small {
+    font-size: 10px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff63;
+}
+
+.velocimeterHud .carMarch div {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    margin: 0 6px;
+    font-size: 14px;
+    color: #ff7373;
+    font-weight: 600;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    filter: drop-shadow(0px 0px 5px #ec1616);
+
+}
+
+.velocimeterHud h1 {
+    position: absolute;
+    width: 80px;
+    font-size: 38px;
+    margin-top: -4px;
+    margin-bottom: -6px;
+    left: 0px;
+    bottom: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.velocimeterHud h1 b {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+#lightRight {
+    opacity: 0;
+}
+
+.velocimeterHud span {
+    position: absolute;
+    bottom: 18px;
+    left: 27px;
+    font-size: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.velocimeterHud .carInfo {
+    position: relative;
+    bottom: -20px;
+    left: 5px;
+    font-size: 9px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.velocimeterHud .carInfo img {
+    opacity: .5;
+    margin: 0 5px;
+    max-width: 12px;
+    transition: all .2s;
+}
+
+.velocimeterHud .carInfo img:nth-child(1) {
+    position: relative;
+    opacity: 1;
+    top: -1px;
+}
+
+.velocimeterHud .carInfo .activeBelt {
+    filter: drop-shadow(0px 0px 0px rgba(83, 236, 22, 0.158));
+}
+
+.velocimeterHud .carInfo .removeBelt {
+    animation: lightBlink infinite 1s ease-in;
+    filter: drop-shadow(0px 0px 0px #ec16162a);
+}
+
+.velocimeterHud .carInfo .activeLight {
+    animation: lightBlink infinite .5s ease-in;
+}
+
+@keyframes lightBlink {
+    0% {
+        opacity: .5;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+    }
+}
+
+.velocimeterHud .circle {
+    position: absolute;
+    top: 0%;
+    left: 20px;
+    transform: translate(0, -50%) scale(4.2) rotateZ(-7deg);
+}
+
+.velocimeterHud .circle2 {
+    position: absolute;
+    top: 5%;
+    left: 10px;
+    transform: translate(0, -50%) scale(4.2) rotateX(180deg) rotateZ(-150deg);
+}
+
+.velocimeterHud .carFuel {
+    position: absolute;
+    bottom: 33px;
+    right: -14px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.velocimeterHud .carFuel span {
+    position: relative;
+    left: -5px;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.velocimeterHud .carFuel i {
+    font-size: 10px;
+    position: relative;
+    left: -5px;
+}
+
+.velocimeterHud .carFuel .fuelCircle {
+    position: absolute;
+    left: -8px;
+}
+
+.velocimeterHud .carFuel span b {
+    opacity: .5;
+}
+
+
+.velocimeterHud .carBody {
+    position: absolute;
+    bottom: 33px;
+    right: -14px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.velocimeterHud .carBody span {
+    position: relative;
+    left: -5px;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.velocimeterHud .carBody i {
+    font-size: 10px;
+    position: relative;
+    left: -5px;
+}
+
+.velocimeterHud .carBody .bodyCircle {
+    position: absolute;
+    left: -8px;
+}
+
+.velocimeterHud .carBody span b {
+    opacity: .5;
+}
+
+.velocimeterHud .engineCircle {
+    position: absolute;
+    bottom: -38px;
+    right: -78px;
+    zoom: .6;
+}
+
+.velocimeterHud .engineCircle i {
+    position: absolute;
+    left: 51%;
+    top: 48%;
+    font-size: 12px;
+    transform: translate(-50%, -50%);
+}
+
+.velocimeterHud .engineCircle span {
+    position: absolute;
+    bottom: 16px;
+    right: -65px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    justify-items: center;
+}
+
+.velocimeterHud .fuelCircle {
+    position: absolute;
+    bottom: -17px;
+    right: -40px;
+    zoom: .6;
+}
+
+.velocimeterHud .fuelCircle i {
+    position: absolute;
+    left: 51%;
+    top: 45%;
+    font-size: 12px;
+    transform: translate(-50%, -50%);
+}
+
+.velocimeterHud .bodyCircle {
+    position: absolute;
+    bottom: 35px;
+    right: -37px;
+    zoom: .6;
+}
+
+.velocimeterHud .bodyCircle i {
+    position: absolute;
+    left: 51%;
+    top: 45%;
+    font-size: 12px;
+    transform: translate(-50%, -50%);
+}
+
+
+.outer {
+    -webkit-transform: rotate(130deg);
+    -ms-transform: rotate(130deg);
+    transform: rotate(130deg) scale(.9);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.progress {
+    -webkit-transition: 0.35s stroke-dashoffset;
+    -o-transition: 0.35s stroke-dashoffset;
+    transition: 0.35s stroke-dashoffset;
+    -webkit-transform: rotate(130deg);
+    -ms-transform: rotate(130deg);
+    transform: rotate(130deg) scale(.9);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+
+/*
+=========================================
+  SVG CIRCLE
+=========================================
+*/
+
+.svgCircle {
+    height: 50px;
+    width: 50px;
+}
+
+.svgCircle circle {
+    fill: none;
+    stroke-width: 2.0px;
+    stroke-dasharray: 113;
+    transition: all .5s;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+.circleFill {
+    filter: drop-shadow(0px 0px 2px #ffffff00);
+    stroke: #ffffff;
+    stroke-dashoffset: 100;
+}
+
+.circleFillVida {
+    filter: drop-shadow(0px 0px 2px #ffffff00);
+    stroke: #ffffff;
+    stroke-dashoffset: 100;
+}
+
+.circleFill2 {
+    filter: drop-shadow(0px 0px 2px #ffb70000);
+    stroke: #ffb700;
+    stroke-dashoffset: 100;
+}
+
+.lifeFill {
+    filter: drop-shadow(0px 0px 2px #bcff7a00);
+    stroke: rgba(251, 54, 64, 1);
+    stroke-dashoffset: 100;
+}
+
+.shieldFill {
+    filter: drop-shadow(0px 0px 2px #bcff7a00);
+    stroke: #FFF;
+    stroke-dashoffset: 100;
+}
+
+.waterFill {
+    filter: drop-shadow(0px 0px 2px #81d9ff00);
+    stroke: #669AE1;
+    stroke-dashoffset: 100;
+}
+
+.foodFill {
+    filter: drop-shadow(0px 0px 2px #ffd47700);
+    stroke: rgba(241, 115, 0, 1);
+    stroke-dashoffset: 100;
+}
+
+.stressFill {
+    stroke: #D1D646;
+    stroke-dashoffset: 100;
+}
+
+.circleFill6 {
+    filter: drop-shadow(0px 0px 2px #68009100);
+    stroke: #e23c3cd5;
+    stroke-dashoffset: 100;
+}
+
+.circleBack {
+    stroke: #ffffff32;
+    stroke-width: 3.2px;
+}
+
+#vidaicon {
+    color: rgba(251, 54, 64, 1);
+    position: absolute;
+    right: -20px;
+    bottom: 70px;
+    transform: scale(1.1);
+}
+
+.fa-heart {
+    margin-bottom: -0.2px;
+    border-radius: 50px;
+    padding: 7px;
+    background: rgba(251, 54, 64, 0.2);
+}
+
+#coleteicon {
+    position: absolute;
+    right: -70px;
+    bottom: 70px;
+    transform: scale(1.1);
+}
+
+.fa-shield-blank {
+    margin-bottom: -0.2px;
+    border-radius: 50px;
+    padding: 7px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#fomeicon {
+    color: rgba(241, 115, 0, 1);
+    position: absolute;
+    right: -120px;
+    bottom: 70px;
+    transform: scale(1.1);
+}
+
+.fa-utensils {
+    margin-bottom: -0.2px;
+    border-radius: 100px;
+    padding: 7px 7px 7px 8px;
+    background: rgba(241, 115, 0, 0.2);
+}
+
+#sedeicon {
+    color: #86b4f3;
+    position: absolute;
+    right: -170px;
+    bottom: 70px;
+    transform: scale(1.1);
+}
+
+.fa-water {
+    margin-bottom: -0.2px;
+    border-radius: 100px;
+    padding: 7px 6.1px;
+    background: rgba(134, 179, 243, 0.2);
+}
+
+#stressicon {
+    color: #D1D646;
+    position: absolute;
+    right: -220px;
+    bottom: 75px;
+    transform: scale(1.1);
+}
+
+.fa-brain {
+    /* margin-bottom: -0.2px; */
+    border-radius: 100px;
+    padding: 7px 7px 7px 7px;
+    background: rgba(209, 214, 70, 0.2);
+}
+

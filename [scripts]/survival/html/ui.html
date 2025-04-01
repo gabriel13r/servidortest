@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Tela de morte</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="container">
+		<div id="fainting">
+			<div class="container_">
+				<img src="/html/images/Morto.png" class="img" draggable="false">
+				<div class="informations">
+					<h1 class="fainting_title">VOCÊ <ee class="esta">ESTÁ</ee> EM COMA!</h1>
+					<b>Seu tempo esta passando...</b>
+					<span id="clock" class="clock">25:00</span>
+					<button class="botao" onclick="abrirModal()">DESISTIR IMEDIATAMENTE</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup" id="popup-1">
+			<div class="overlay"></div>
+			<div class="content">
+				<div class="title">
+				<p class="subtitle">Tem certeza que deseja desistir? Você perderá todos os seus itens.</p>
+				</div>
+				<button type="button" class="btn" style="background: #ffffff; color: #000;"  onclick="fecharModal()">NÃO</button>
+				<button type="button" class="btn btn-warning" style="background: #ffffff; color: #000; border: none;" onclick="simAceita()">SIM</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="js.js" type="text/javascript"></script>
+</body>
+
+</html>

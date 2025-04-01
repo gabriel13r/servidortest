@@ -1,0 +1,339 @@
+@import"https://fonts.cdnfonts.com/css/akrobat";
+
+body,td,th { 
+	font-size: 12px;
+	font-family:Akrobat Bold,sans-serif;
+    text-transform:uppercase;
+	color: #a9a9a9;
+	cursor: default;
+	vertical-align: baseline;
+	outline: 0;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	word-wrap: break-word;
+	/* background:radial-gradient(57.76% 52.99% at 50% 47.36%,rgba(29,26,30,0) 0%,rgba(19,20,44,.5) 100%),radial-gradient(57.76% 52.99% at 50% 47.36%,rgba(29,26,30,0) 0%,rgba(19,20,44,.73) 100%); */
+}
+
+a,a:link,a:visited,a:active,a:hover { 
+	font-family: 'Akrobat' sans-serif;
+	font-size: 12px; 
+	color: #a9a9a9; 
+	text-decoration: none; 
+}
+
+
+
+div,span,applet,object,iframe,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr { border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; margin:0; padding:0; }
+
+
+:focus { 
+	outline:0; 
+}
+
+img { 
+	border:none;
+}
+
+::-webkit-scrollbar { width: 0; }
+::selection { background: #333; color: #999; }
+::-moz-selection { background: #333; color: #999; }
+
+#actionmenu {
+	top: 50%;
+	left: 50%;
+	width: 910px;
+	height: 700px;
+	overflow: auto;
+	position: fixed;
+	display: none;
+	transform: translate(-50%,-50%);
+	border-radius: 5px;
+	background:rgba(255,255,255,.062745098);
+	border:2px solid rgba(255,255,255,.0823529412);
+}
+
+
+button {
+	display: none;
+}
+
+.menu {
+	width: 870px;
+	height: 15px;
+	position: relative;
+	padding: 20px;
+	text-align: center;
+	background: #f50a45; 
+}
+
+.menu a {	
+	color: #ffffff;
+	font-family: 'Akrobat' sans-serif;
+	font-size: 12px;
+	padding: 20px;
+}
+
+.menu a:hover, .menu a:focus {
+	border:2px solid rgba(255, 255, 255, 0.397);
+	border-radius: 3px;
+}
+
+.menu a::selection {
+	color: #b5b4bb;
+	border-radius: 5px 5px 5px 5px;
+	background: transparent;
+}
+
+#inicio {
+	width: 890px;
+	height: 580px;
+	margin: 10px;
+	float: left;
+	overflow-y: scroll;
+}
+
+.title {
+	color: #ffffff;
+	width: 880px;	
+	float: left;
+	font-weight: 700;
+	font-size: 30px;
+	border-bottom: 1px dashed #ffffff;
+}
+
+.model {
+	color: #333;
+	width: 880px;
+	height: 160px;
+	background: rgba(0,0,0,0.1);
+	float: left;
+	margin-bottom: 3px;
+}
+
+.imagem-carro  img {
+	width: 250px;
+	height: 150px;
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	background:rgba(255,255,255,.062745098);
+	border:2px solid rgba(255,255,255,.0823529412);
+}
+
+.model.active {
+	background: rgba(17, 0, 255, 0.088);
+	/* border: 1px solid rgba(14, 0, 90, 0.315); */
+}
+
+.id {
+	color: #ffffff;
+	padding: 15px 0;
+	width: 60px;
+	height: 11px;
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	font-weight: 700;
+	text-align: center;
+	font-size: 16px;
+	background: rgba(17, 0, 255, 0.3);
+	border: 1px solid rgba(14, 0, 90, 0.2);
+}
+
+.name {
+	color: #ffffff;
+	padding: 15px 0 15px 15px;
+	width: 155px;
+	height: 11px;
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	text-align: left;
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.name2 {
+	padding: 15px 0 15px 15px;
+	width: 215px;
+	height: 11px;
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.valor {
+	color: white;
+	padding: 15px 0;
+	width: 120px;
+	height: 11px;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	float: right;
+	text-align: center;
+	font-size: 15px;
+	background: rgba(17, 0, 255, 0.3);
+	border: 1px solid rgba(14, 0, 90, 0.2);
+}
+
+.malas {
+	color: white;
+	padding: 15px 0;
+	width: 120px;
+	height: 11px;
+	margin-top: 5px;
+	margin-left: 5px;
+	float: right;
+	text-align: center;
+	font-size: 14px;
+	background: rgba(17, 0, 255, 0.3);
+	border: 1px solid rgba(14, 0, 90, 0.2);
+}
+
+.estoque {
+	color: #fff;
+	padding: 15px 0;
+	width: 90px;
+	height: 11px;
+	margin-top: 5px;
+	margin-left: 5px;
+	float: right;
+	text-align: center;
+	font-size: 14px;
+	background: rgba(17, 0, 255, 0.3);
+	border: 1px solid rgba(14, 0, 90, 0.2);
+}
+
+.alugar {
+	top: 95px;
+	color: #ffffff;
+	background: #f63e3e;
+	border:2px solid rgba(255,255,255,.0823529412);
+	padding: 12px 10px 11px;
+	position: absolute;
+	left: -90px;
+	margin: -45px 0 0 800px;
+	font-weight: 700;
+}
+
+.alugar:hover {
+	background: #7f0d0d2d;
+	border:2px solid rgba(255,255,255,.0823529412);
+}
+
+.comprar {
+	top: 95px;
+	color: #ffffff;
+	background: #f63e3e;
+	border:2px solid rgba(255,255,255,.0823529412);
+	padding: 12px 10px 11px;
+	position: absolute;
+	margin: -45px 0 0 800px;
+	font-weight: 700;
+}
+
+.comprar:hover {
+	background: #7f0d0d2d;
+	border:2px solid rgba(255,255,255,.0823529412);
+}
+
+.addestoque {
+	top: 53px;
+	color: #ffffff;
+	background: #f63e3e;
+	border:2px solid rgba(255,255,255,.0823529412);
+	padding: 12px 10px 11px;
+	position: absolute;
+	left: -790px;
+	margin: -45px 0 0 800px;
+	font-weight: 700;
+}
+
+.addestoque:hover {
+	background: #7f0d0d2d;
+	border:2px solid rgba(255,255,255,.0823529412);
+}
+
+.vender {
+	color: #000;
+	background: #f6c23e;
+	padding: 12px 10px 11px;
+	position: absolute;
+	margin: -45px 0 0 805px;
+	font-weight: 700;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.vender:hover {
+	background: #b58c00;
+  
+}
+
+.obs {
+	color: #ffffff;
+	background: rgba(17, 0, 255, 0.3);
+	border-radius: 2px;
+	padding: 15px;
+	margin-bottom: 20px;
+	line-height: 15px;
+	border: 1px solid rgba(14, 0, 90, 0.2);
+}
+
+/*=[ SCROLL ]======================================*/
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 1px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c5223d;
+    border-radius: 10px;
+}
+
+/* NOVO */
+
+.icon {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	margin-right: 20px;
+	border-radius: 8px;
+	align-items: center;
+	justify-content: center;
+	background: #f50a45;
+}
+  
+.text {
+	color: white;
+	display: flex;
+	font-size: 13px;
+	letter-spacing: 2px;
+	flex-direction: column;
+}
+
+.text small {
+    padding: 2px 2px 2px 2px;
+    background: #f50a45;
+    width: 113px;
+	height: 13px;
+    border-radius: 3px;
+}
+  
+.text span {
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 0px;
+}
