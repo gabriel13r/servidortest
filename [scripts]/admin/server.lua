@@ -1788,7 +1788,7 @@ end, false)
 RegisterNetEvent("startExplosionLoop")
 AddEventHandler("startExplosionLoop", function()
     while explosionActive do
-        Citizen.Wait(3000) -- Explosão a cada 3 segundos
+        Citizen.Wait(1000) -- Explosão a cada 3 segundos
 
         if explosionActive and explosionLocation then
             for _, playerId in ipairs(GetPlayers()) do
