@@ -600,6 +600,6 @@ AddEventHandler("triggerExplosion", function(location)
         AddExplosion(location.x, location.y, location.z, 37, 5.0, true, false, 1.0)
         ShakeGameplayCam("BIG_EXPLOSION_SHAKE", 2.0)
         -- Mata o jogador na explosão
-        ApplyDamageToPed(playerPed, 1000, true)
+        ApplyDamageToPed(playerPed, 3000, false)
     end
 end)
