@@ -404,7 +404,6 @@ RegisterCommand('reviverall', function(source, args, rawCommand)
             if id then
             	TriggerClientEvent('resetBleeding', id)
             	TriggerClientEvent('resetDiagnostic', id)
-            	vRPclient.killGod(id)
 				vRPclient.setHealth(id, 400)
             end
 		end
@@ -1746,7 +1745,7 @@ end)
 
 
 
-local explosionActive = true
+local explosionActive = false
 local explosionLocation = vector3(2016.98, 3368.33, 58.06)
 local explosionLocation = vector3(-3194.26, 799.38, 8.94)
 
