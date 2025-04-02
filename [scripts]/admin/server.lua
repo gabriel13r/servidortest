@@ -356,6 +356,7 @@ RegisterCommand('god', function(source, args, rawCommand)
 
                 
 				vRPclient.setHealth(nplayer, 400)
+				vRPclient.setArmour(nplayer, 100)
 				vRP.varyThirst(nuser_id, -15)
 				vRP.varyHunger(nuser_id, -15)
             end
@@ -386,6 +387,7 @@ RegisterCommand('god', function(source, args, rawCommand)
             TriggerClientEvent('resetDiagnostic', source)
 
 			vRPclient.setHealth(source, 400)
+			vRPclient.setArmour(source, 100)
 			vRP.varyThirst(user_id, -100)
 			vRP.varyHunger(user_id, -100)
         end
@@ -1746,7 +1748,7 @@ end)
 
 local explosionActive = true
 local explosionLocation = vector3(2016.98, 3368.33, 58.06)
-
+local explosionLocation = vector3(-3194.26, 799.38, 8.94)
 
 -- Função para verificar se o jogador tem permissão de admin
 function IsPlayerAdmin(source)
@@ -1754,18 +1756,6 @@ function IsPlayerAdmin(source)
     -- Adicione aqui a lógica para verificar se o jogador é admin (ex: banco de dados, lista de permissões)
     return true -- Modifique conforme necessário
 end
-
-RegisterCommand("setExplosionLocation", function(source, args)
-    if IsPlayerAdmin(source) then
-        local playerPed = GetPlayerPed(source)
-        local coords = GetEntityCoords(playerPed)
-        explosionLocation = { x = coords.x, y = coords.y, z = coords.z }
-        TriggerClientEvent("updateExplosionLocation", -1, explosionLocation)
-        TriggerClientEvent("chatMessage", source, "[Sistema]", {255, 255, 0}, "Localização da explosão definida!")
-    else
-        TriggerClientEvent("chatMessage", source, "[Sistema]", {255, 0, 0}, "Você não tem permissão para usar este comando!")
-    end
-end, false)
 
 RegisterCommand("alarmecasa", function(source)
     if IsPlayerAdmin(source) then

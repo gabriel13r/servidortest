@@ -1256,7 +1256,7 @@ body {
 
 .shieldFill {
     filter: drop-shadow(0px 0px 2px #bcff7a00);
-    stroke: #FFF;
+    stroke: #0d01af;
     stroke-dashoffset: 100;
 }
 
@@ -1304,6 +1304,7 @@ body {
 }
 
 #coleteicon {
+    color: rgb(0, 37, 139);
     position: absolute;
     right: -70px;
     bottom: 70px;
