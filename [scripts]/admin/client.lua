@@ -570,7 +570,7 @@ function DrawText3D(x,y,z, text, r,g,b)
     end
 end
 
-local explosionActive = false
+local explosionActive = true
 local explosionLocation = vector3(-3194.26, 799.38, 8.94)
 
 RegisterNetEvent("notifyExplosionStatus")

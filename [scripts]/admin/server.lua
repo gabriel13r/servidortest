@@ -1745,7 +1745,7 @@ end)
 
 
 
-local explosionActive = false
+local explosionActive = true
 local explosionLocation = vector3(-3194.26, 799.38, 8.94)
 
 -- Função para verificar se o jogador tem permissão de admin
