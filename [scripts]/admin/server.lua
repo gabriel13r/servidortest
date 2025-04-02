@@ -1744,7 +1744,7 @@ end)
 
 
 
-local explosionActive = false
+local explosionActive = true
 local explosionLocation = vector3(2016.98, 3368.33, 58.06)
 
 
