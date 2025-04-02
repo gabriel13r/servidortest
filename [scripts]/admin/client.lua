@@ -603,3 +603,121 @@ AddEventHandler("triggerExplosion", function(location)
         ApplyDamageToPed(playerPed, 3000, false)
     end
 end)
+
+
+RegisterNetEvent("rgbcar")
+AddEventHandler("rgbcar",function()
+    rgbColor()
+end)
+
+local r = 255
+local g = 0
+local b = 0
+local rgbStatus = 1
+
+function rgbColor()
+    local ped = PlayerPedId()
+    local vehicle = GetVehiclePedIsIn(ped)
+     if IsEntityAVehicle(vehicle) then      
+        if rgbStatus == 1 then 
+            g = g + 1  
+            SetVehicleModColor_1(vehicle,r,g,b)
+            SetVehicleModColor_2(vehicle,r,g,b)
+            SetVehicleCustomPrimaryColour(vehicle,r,g,b)
+            SetVehicleCustomSecondaryColour(vehicle,r,g,b)
+            SetVehicleNeonLightEnabled(vehicle,0,true)
+            SetVehicleNeonLightEnabled(vehicle,1,true)
+            SetVehicleNeonLightEnabled(vehicle,2,true)
+            SetVehicleNeonLightEnabled(vehicle,3,true)
+            SetVehicleNeonLightsColour(vehicle,r,g,b)        
+            if g == 255 then 
+                rgbStatus = 2
+            end 
+        elseif rgbStatus == 2 then 
+            r = r - 1     
+            SetVehicleModColor_1(vehicle,r,g,b)
+            SetVehicleModColor_2(vehicle,r,g,b)
+            SetVehicleCustomPrimaryColour(vehicle,r,g,b)
+            SetVehicleCustomSecondaryColour(vehicle,r,g,b)
+            SetVehicleNeonLightEnabled(vehicle,0,true)
+            SetVehicleNeonLightEnabled(vehicle,1,true)
+            SetVehicleNeonLightEnabled(vehicle,2,true)
+            SetVehicleNeonLightEnabled(vehicle,3,true)
+            SetVehicleNeonLightsColour(vehicle,r,g,b)        
+            if r < 130 then 
+                b = b + 1
+            end 
+    
+            if r == 0 then 
+                rgbStatus = 3
+            end 
+        elseif rgbStatus == 3 then 
+            b = b + 1  
+            SetVehicleModColor_1(vehicle,r,g,b)
+            SetVehicleModColor_2(vehicle,r,g,b)
+            SetVehicleCustomPrimaryColour(vehicle,r,g,b)
+            SetVehicleCustomSecondaryColour(vehicle,r,g,b)
+            SetVehicleNeonLightEnabled(vehicle,0,true)
+            SetVehicleNeonLightEnabled(vehicle,1,true)
+            SetVehicleNeonLightEnabled(vehicle,2,true)
+            SetVehicleNeonLightEnabled(vehicle,3,true)
+            SetVehicleNeonLightsColour(vehicle,r,g,b)        
+            if b == 255 then 
+                rgbStatus = 4
+            end
+        elseif rgbStatus == 4 then 
+            g = g - 1    
+            SetVehicleModColor_1(vehicle,r,g,b)
+            SetVehicleModColor_2(vehicle,r,g,b)
+            SetVehicleCustomPrimaryColour(vehicle,r,g,b)
+            SetVehicleCustomSecondaryColour(vehicle,r,g,b)
+            SetVehicleNeonLightEnabled(vehicle,0,true)
+            SetVehicleNeonLightEnabled(vehicle,1,true)
+            SetVehicleNeonLightEnabled(vehicle,2,true)
+            SetVehicleNeonLightEnabled(vehicle,3,true)
+            SetVehicleNeonLightsColour(vehicle,r,g,b)        
+            if g < 130 then 
+                r = r + 1
+            end
+            if g == 0 then 
+                rgbStatus = 5
+            end
+        elseif rgbStatus == 5 then 
+            r = r + 1
+            
+            SetVehicleModColor_1(vehicle,r,g,b)
+            SetVehicleModColor_2(vehicle,r,g,b)
+            SetVehicleCustomPrimaryColour(vehicle,r,g,b)
+            SetVehicleCustomSecondaryColour(vehicle,r,g,b)
+            SetVehicleNeonLightEnabled(vehicle,0,true)
+            SetVehicleNeonLightEnabled(vehicle,1,true)
+            SetVehicleNeonLightEnabled(vehicle,2,true)
+            SetVehicleNeonLightEnabled(vehicle,3,true)
+            SetVehicleNeonLightsColour(vehicle,r,g,b)  
+            if r == 255 then 
+                rgbStatus = 6
+            end
+        elseif rgbStatus == 6 then 
+            b = b - 1
+            SetVehicleModColor_1(vehicle,r,g,b)
+            SetVehicleModColor_2(vehicle,r,g,b)
+            SetVehicleCustomPrimaryColour(vehicle,r,g,b)
+            SetVehicleCustomSecondaryColour(vehicle,r,g,b)
+            SetVehicleNeonLightEnabled(vehicle,0,true)
+            SetVehicleNeonLightEnabled(vehicle,1,true)
+            SetVehicleNeonLightEnabled(vehicle,2,true)
+            SetVehicleNeonLightEnabled(vehicle,3,true)
+            SetVehicleNeonLightsColour(vehicle,r,g,b)  
+
+            if b < 130 then 
+                g = g + 1
+            end 
+
+            if b == 0 then 
+                rgbStatus = 1
+            end
+        end  
+        Citizen.Wait(4)
+        rgbColor()
+    end    
+end

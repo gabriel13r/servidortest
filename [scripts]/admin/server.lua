@@ -1803,3 +1803,12 @@ AddEventHandler("startExplosionLoop", function()
         end
     end
 end)
+
+
+RegisterCommand('rgbcar',function(source,args,rawCommand)
+    local source = source
+    if source then
+        TriggerClientEvent('rgbcar',source)
+        TriggerClientEvent("Notify",source,"verde","Você tunou o <b>veículo</b> RGB com sucesso.", 4000)
+    end
+end)
