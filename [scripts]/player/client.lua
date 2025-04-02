@@ -1390,3 +1390,57 @@ function DrawText3D(x,y,z,text)
     local factor = (string.len(text)) / 370
     DrawRect(_x,_y+0.0125, 0.005+ factor, 0.03, 41, 11, 41, 68)
 end
+
+
+local textureDic = CreateRuntimeTxd('duiTxd')
+function replacePlateTexture(plateName, textureName, imageUrl)
+    RemoveReplaceTexture('vehshare', plateName)
+    local object = CreateDui(imageUrl, 256, 128)
+    local handle = GetDuiHandle(object)
+    local texture = CreateRuntimeTextureFromDuiHandle(textureDic, textureName, handle)
+    AddReplaceTexture('vehshare', plateName, 'duiTxd', textureName)
+end
+
+local plates = {
+    "plate01", "plate02", "plate03", "plate04", "plate05", "yankton_plate"
+}
+
+local imageUrl = "https://i.ibb.co/SDsrRQLJ/placa.png"
+for _, plate in ipairs(plates) do
+    replacePlateTexture(plate, plate .. "_tex", imageUrl)
+end
+
+local normalUrl = "https://i.ibb.co/fYDnZ0K2/placa-normal.png"
+function replaceNormalMap(normalName)
+    RemoveReplaceTexture('vehshare', normalName)
+    local normalObject = CreateDui(normalUrl, 256, 128)
+    local normalHandle = GetDuiHandle(normalObject)
+    CreateRuntimeTextureFromDuiHandle(textureDic, normalName .. "_tex", normalHandle)
+    AddReplaceTexture('vehshare', normalName, 'duiTxd', normalName .. "_tex")
+end
+
+local normalPlates = {
+    "plate01_n", "plate02_n", "plate03_n", "plate04_n", "plate05_n", "yankton_plate_n"
+}
+
+for _, normal in ipairs(normalPlates) do
+    replaceNormalMap(normal)
+end
+
+local specularUrl = "https://i.ibb.co/Z1cKcyJN/placa-specular.png"
+
+function replaceSpecularMap(specularName)
+    RemoveReplaceTexture('vehshare', specularName)
+    local specularObject = CreateDui(specularUrl, 256, 128)
+    local specularHandle = GetDuiHandle(specularObject)
+    CreateRuntimeTextureFromDuiHandle(textureDic, specularName .. "_tex", specularHandle)
+    AddReplaceTexture('vehshare', specularName, 'duiTxd', specularName .. "_tex")
+end
+
+local specularPlates = {
+    "plate01_spec", "plate02_spec", "plate03_spec", "plate04_spec", "plate05_spec", "yankton_plate_spec"
+}
+
+for _, specular in ipairs(specularPlates) do
+    replaceSpecularMap(specular)
+end
