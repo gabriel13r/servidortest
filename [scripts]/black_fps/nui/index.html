@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/general.css">
+
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/f1911509d9.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" style="display: none;">
+        <div class="outer_edge">
+            <div class="secondary_bg">
+                <main class="main_container">
+                    <div class="fps_box">
+                        <span>FPS</span>
+                        <div class="fps_block">
+                            <span id="fps_value">80</span>
+                        </div>
+                    </div>
+                    <div class="title_block">
+                        <div class="left_border"></div>
+                        <div class="title">
+                            <h1>Bem Vindo, <span id="title_playername">Felipe.</span></h1>
+                            <p>Otimize seu jogo com nosso boost.</p>
+                        </div>
+                    </div>
+                    <div class="main_content">
+                        <div class="left_box">
+                            <div class="configs_title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M16 2.66667H13.5M9.95833 1V4.33333M9.33333 2.66667H1M4.33333 8.5H1M7.45833 6.83333V10.1667M16 8.5H7.66667M16 14.3333H13.5M9.95833 12.6667V16M9.33333 14.3333H1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <h2>CRIE SUA OTIMIZAÇÃO</h2>
+                            </div>
+                            <div class="configs_cont">
+                                <div class="config_item">
+                                    <h3>DISTANCIA DE CARREGAMENTO</h3>
+                                    <div class="configs_block">
+                                        <div class="input_bg">
+                                            <input oninput="updateValue(this)" type="range" min="0" max="6" value="1" id="distance">
+                                        </div>
+                                        <div class="selected_percentage_box">
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="config_item">
+                                    <h3>OTIMIZAR TEXTURAS</h3>
+                                    <div class="configs_block">
+                                        <div class="input_bg">
+                                            <input oninput="updateValue(this)" type="range" min="0" max="2" value="1" id="light">
+                                        </div>
+                                        <div class="selected_percentage_box">
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="config_item">
+                                    <h3>OTIMIZAR TEXTURAS</h3>
+                                    <div class="configs_block">
+                                        <div class="input_bg">
+                                            <input oninput="updateValue(this)" type="range" min="0" max="2" value="1" id="texture">
+                                        </div>
+                                        <div class="selected_percentage_box">
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="config_item">
+                                    <h3>OTIMIZAR SOMBRAS</h3>
+                                    <div class="configs_block">
+                                        <div class="input_bg">
+                                            <input oninput="updateValue(this)" type="range" min="0" max="2" value="1" id="shadow">
+                                        </div>
+                                        <div class="selected_percentage_box">
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="save_btn" id="saveBtn">SALVAR E APLICAR</button>
+                            <p class="end_alert_txt">*Atenção, os resultados das otimizações são relativos as configurações do seu computador, cada sistema reage de uma forma diferente.</p>
+                        </div>
+                        <div class="middle_border"></div>
+                        <div class="right_box">
+                            <h2>DESCUBRA O EFEITO DE CADA OTIMIZAÇÃO.</h2>
+                            <div class="top_border"></div>
+                            <div class="text_cont">
+                                <div class="text_block">
+                                    <h4>1. DISTANCIA DE CARREGAMENTO</h4>
+                                    <p>A distância de carregamento em jogos como o GTA V refere-se à distância visual dentro do jogo na qual os objetos e texturas são carregados e exibidos.</p>
+                                </div>
+                                <div class="text_block">
+                                    <h4>2. OTIMIZAR TEXTURAS</h4>
+                                    <p>A opção "otimizar texturas" em jogos como o GTA V geralmente se refere a um recurso que ajusta a qualidade e o tamanho das texturas usadas no jogo para melhorar o desempenho.</p>
+                                </div>
+                                <div class="text_block">
+                                    <h4>3. OTIMIZAR LUZES</h4>
+                                    <p>Quando ativada, essa opção pode reduzir o número de fontes de luz dinâmicas, diminuir a qualidade das sombras ou simplificar outros efeitos de iluminação, isso é feito para reduzir a carga no processador gráfico.</p>
+                                </div>
+                                <div class="text_block">
+                                    <h4>4. OTIMIZAR SOMBRAS</h4>
+                                    <p>Quando ativada, essa opção pode reduzir a resolução das sombras, diminuir a distância de renderização das sombras ou simplificar outros aspectos relacionados às sombras.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="scripts/general.js"></script>
+
+</html>
